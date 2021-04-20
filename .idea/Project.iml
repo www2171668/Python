@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="PYTHON_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/1-Python基础" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/1-Python基础/15-模块" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/1-Python基础/15-模块/Custom_Module" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/8-MARL/MinimaxQ-Learning-master" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/8-MARL/nash_q_learning-master" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/8-MARL/MADDPG/maddpg-master" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/8-MARL/MADDPG/multiagent-particle-envs-master" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/8-MARL/MADDPG" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/8-MARL/playground-master" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/8-MARL/5.1-playground-master" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/9-元学习/pytorch-maml-master" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/9-元学习/pytorch-maml-master/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/9-元学习/MAML-Pytorch-master" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/1-我的code/5.2-RL用/unified-hrl-master/montezuma-AAAI" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/1-mycode/5.2-RL用/unified-hrl-master/montezuma-ICLR" isTestSource="false" />
+      <excludeFolder url="file://$MODULE_DIR$/1-mycode/5.2-RL用/unified-hrl-master/rooms-two-phase" />
+      <excludeFolder url="file://$MODULE_DIR$/1-我的code/5.2-RL用/unified-hrl-master/rooms-two-phase" />
+      <excludeFolder url="file://$MODULE_DIR$/venv" />
+    </content>
+    <orderEntry type="jdk" jdkName="Python 3.6 (torch)" jdkType="Python SDK" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

@@ -1,0 +1,16 @@
+Traceback (most recent call last):
+  File "main.py", line 18, in <module>
+    f.write(int(args.seed))
+TypeError: write() argument must be str, not int
+Traceback (most recent call last):
+  File "main.py", line 18, in <module>
+    f.write(int(args.seed))
+TypeError: write() argument must be str, not int
+Traceback (most recent call last):
+  File "main.py", line 18, in <module>
+    f.write(int(args.seed))
+TypeError: write() argument must be str, not int
+Traceback (most recent call last):
+  File "main.py", line 18, in <module>
+    f.write(int(args.seed))
+TypeError: write() argument must be str, not int

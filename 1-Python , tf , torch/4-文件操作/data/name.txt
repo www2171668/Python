@@ -1,0 +1,10 @@
+mean:12345.56, std:454.58
+hello22222 word 你好 
+mean:12345.56, std:454.58
+hello22222 word 你好 
+mean:12345.56, std:454.58
+hello22222 word 你好 
+mean:12345.56, std:454.58
+hello22222 word 你好 
+mean:12345.56, std:454.58
+hello22222 word 你好 
