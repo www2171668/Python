@@ -8,7 +8,7 @@ arr = np.array(a)
 
 arr = np.array([[1, 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12]])
 
-# %% np.empty / np.ones / np.zeros  创建空数组           dtype 控制数组元素的类型，il为整数
+# %% np.empty(()) / np.ones(()) / np.zeros(())  创建空数组，注意内层()          dtype 控制数组元素的类型，il为整数
 arrs = np.empty((2, 3), dtype='i1')
 arrs = np.ones((2, 3))
 arrs = np.zeros((2, 3))

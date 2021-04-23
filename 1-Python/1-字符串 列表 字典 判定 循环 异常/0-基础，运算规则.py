@@ -1,13 +1,14 @@
 # %% 输出方式 .format() 或  %()    %s 输出字符串    %d 输出数字       end     \n
-print('a=',10)
+print('a=', 10)
 
 print('a={},b={}'.format(10, 'y'))
 print('大家好我叫%s,我今年%d岁，我来自%s' % ('joe', 18, '上海'))
+print('mean:{mean:.2f}, std:{std:.2f}'.format(mean=5.5, std=2.1) + '\n')  # * 字典型
 
 print('1', end='')  # * 为end传递一个空字符串，这样print函数不会在字符串末尾添加一个换行符，而是添加一个空字符串
 print('5')  # 5会接在1后面
 
-print("result:\n{}".format(10)) # * 回车
+print("result:\n{}".format(10))  # * 回车
 
 # %% TRUE 为1   FALSE 为0
 print(int(True))
@@ -41,6 +42,6 @@ list1 = [[1, 1, 1], [2, 2, 2]]
 list2 = [[1], [1], [2]]
 print(np.dot(list1, list2))
 print(np.dot(list1, 2))  # \ 不可以用 list1*3 （扩张）
-#%% 整数判断    isinstance(*,类型)
+# %% 整数判断    isinstance(*,类型)
 if not isinstance(10, int):
     raise ValueError('分数必须是整数才行')

@@ -1,5 +1,4 @@
 """"""
-
 import numpy as np
 
 np.random.seed(1337)  # for reproducibility
@@ -10,8 +9,7 @@ from keras.layers import Dense, Activation
 from keras.optimizers import RMSprop
 
 # download the mnist to the path '~/.keras/datasets/' if it is the first time to be called
-# X shape (60,000 28x28), y shape (10,000, )
-(X_train, y_train), (X_test, y_test) = mnist.load_data()
+(X_train, y_train), (X_test, y_test) = mnist.load_data()        # \X shape (60,000 28x28), y shape (10,000, )
 
 # %% data pre-processing
 X_train = X_train.reshape(X_train.shape[0], -1) / 255.  # normalize
@@ -27,18 +25,16 @@ model = Sequential([
     Activation('softmax'),
 ])
 
-# %% 定义优化器
+# %% 编译
 rmsprop = RMSprop(lr=0.001, rho=0.9, epsilon=1e-08, decay=0.0)
 model.compile(loss='categorical_crossentropy',
               optimizer=rmsprop,
-              metrics=['accuracy'])  # add metrics to get more results you want to see
+              metrics=['accuracy'])  # 增加结果
 
-# %% 训练 model.fit(X,Y,epochs,batch)
-print('Training ------------')
-model.fit(X_train, y_train, epochs=2, batch_size=32)
+# %% 训练 model.fit(X,Y,epochs,batch)     epoch：所有数据的训练次数，不是batch批次的训练次数
+model.fit(X_train, y_train, epochs=10, batch_size=32)
 
 # %% 测试
-print('\nTesting ------------')
-loss, accuracy = model.evaluate(X_test, y_test)  # 原本只输出loss，现在增加了accuracy
+loss, accuracy = model.evaluate(X_test, y_test)  # \原本只输出loss，现在增加了accuracy
 print('test loss: ', loss)
 print('test accuracy: ', accuracy)

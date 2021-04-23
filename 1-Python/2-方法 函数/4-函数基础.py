@@ -35,8 +35,7 @@ args = [1, 2, 3]
 kwargs = {"arg3": 3, "arg2": "two", "arg1": 5}
 getInfo(0, args, kwargs)  # * 使用解包调用函数的代码。实际上，使用打包好的参数无需类()中使用*和**来表示，即可以简化为普通形参
 
-# %%  值传递：str tuple 的传递       引用传递：list dict 的传递，在函数中修改传递值，原值改变
-
+# %%  值传递：str tuple 的传递       引用传递：list dict 的传递，在函数中修改传递值，原值改变  ※
 # 1、值传递：不可变对象的传递
 def fun(args):
     args = 'hello'  # \ 重新赋值
