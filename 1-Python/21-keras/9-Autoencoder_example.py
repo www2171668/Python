@@ -18,7 +18,7 @@ x_test = x_test.reshape((x_test.shape[0], -1))
 print(x_train.shape)
 print(x_test.shape)
 
-encoding_dim = 2    # plot in a 2D figure
+encoding_dim = 2  # plot in a 2D figure
 
 # %% input placeholder and encoder layers
 input_img = Input(shape=(784,))
@@ -31,7 +31,7 @@ encoder_output = Dense(encoding_dim)(encoded)
 decoded = Dense(10, activation='relu')(encoder_output)
 decoded = Dense(64, activation='relu')(decoded)
 decoded = Dense(128, activation='relu')(decoded)
-decoded = Dense(784, activation='tanh')(decoded) # [-1,1]
+decoded = Dense(784, activation='tanh')(decoded)  # [-1,1]
 
 # %% autoencoder model     Model(input,output) Input和最后一个网络层构成了整个网络
 autoencoder = Model(input=input_img, output=decoded)
@@ -42,10 +42,8 @@ encoder = Model(input=input_img, output=encoder_output)
 # %% 编译
 autoencoder.compile(optimizer='adam', loss='mse')
 
-# %% 训练
-autoencoder.fit(x_train, x_train,
-                epochs=20,
-                batch_size=128)
+# %% 训练  x为Input的输入
+autoencoder.fit(x=x_train, y=x_train, epochs=20, batch_size=128)
 
 # %% plotting
 encoded_imgs = encoder.predict(x_test)

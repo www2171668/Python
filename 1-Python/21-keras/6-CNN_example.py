@@ -46,7 +46,7 @@ model.add(Activation('relu'))
 model.add(MaxPooling2D(2, 2, 'same', data_format='channels_first'))
 
 # Fully connected layer 1 input shape (64 * 7 * 7) = (3136), output shape (1024)
-model.add(Flatten())        # * Flatten() 数据展平
+model.add(Flatten())  # * Flatten() 数据展平
 model.add(Dense(1024))
 model.add(Activation('relu'))
 
@@ -56,9 +56,7 @@ model.add(Activation('softmax'))
 
 # %% 编译
 adam = Adam(lr=1e-4)
-model.compile(optimizer=adam,
-              loss='categorical_crossentropy',
-              metrics=['accuracy'])
+model.compile(optimizer=adam, loss='categorical_crossentropy', metrics=['accuracy'])
 
 # %% 训练
 model.fit(X_train, y_train, epochs=1, batch_size=64, )

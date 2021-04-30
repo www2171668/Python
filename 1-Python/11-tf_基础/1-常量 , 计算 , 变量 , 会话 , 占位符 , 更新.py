@@ -57,6 +57,7 @@ with tf.Session(config=tf.ConfigProto(log_device_placement=True, allow_soft_plac
     print("result:{}".format(sess.run(c)))  # \result:5.0
 
 # %% 占位符型张量:先运算，再赋值   tf.placeholder()：默认格式为张量      fetches：输出变量     feed_dict：字典型变量,用于在sesson.run()中对占位符张量赋值，并对run()中函数进行输出
+# 案例1
 m1 = tf.placeholder(dtype=tf.float32, shape=[2, 3], name='placeholder_1')
 m2 = tf.placeholder(dtype=tf.float32, shape=[3, 2], name='placeholder_2')
 m3 = tf.matmul(m1, m2)  # \ 先做运算
@@ -64,6 +65,7 @@ m3 = tf.matmul(m1, m2)  # \ 先做运算
 with tf.Session() as sess:
     print(sess.run(fetches=m3, feed_dict={m1: [[1, 2, 3], [4, 5, 6]], m2: [[9, 8], [7, 6], [5, 4]]}))  # * fetches     feed_dict
 
+# 案例2
 input1 = tf.placeholder(tf.float32)
 input2 = tf.placeholder(tf.float32)
 output = tf.multiply(input1, input2)

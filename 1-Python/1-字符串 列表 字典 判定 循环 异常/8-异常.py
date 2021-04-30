@@ -4,7 +4,7 @@
 # * NameError 捕获变量命名异常      Exception 捕获所有异常  ★
 # 1、-》
 try:
-    print(aaa)  # ! 如果这句话有错，就会捕获到异常
+    print(aaa)  # \ 如果这句话有错，就会捕获到异常
 except NameError:
     print('变量未定义')
 
