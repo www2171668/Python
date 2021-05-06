@@ -1,11 +1,18 @@
 """"""
+import numpy as np
 
 # %% 判断 & 循环 & 跳转
-# \ if - elif - else
 # \ while 为True时进入
 # while: ... else:      for、while循环都有一个可选的else分支，只有在循环迭代 正常完成 之后才会执行。
 
 # * break 终止（跳出）当前内圈循环     continue 结束当前内圈循环，直接开始下一次循环
+
+# %% list和np的bool    list只会输出true和false / np会输出每一个数字的判断
+list01 = [1, 0, 0, 0, 1]
+array01 = np.array([1, 0, 0, 0, 1])
+
+condition = (array01 == 1)
+print(condition)
 
 # %% for 变量 in 迭代对象：     迭代对象Iterable包括 list string dict （int不是）     -》pass 仅提示后面没有语句了，没有实际意思
 list01 = ['joe', 'susan', 'jack', 'Tom']

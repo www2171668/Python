@@ -42,6 +42,7 @@ list1 = [[1, 1, 1], [2, 2, 2]]
 list2 = [[1], [1], [2]]
 print(np.dot(list1, list2))
 print(np.dot(list1, 2))  # \ 不可以用 list1*3 （扩张）
+
 # %% 整数判断    isinstance(*,类型)
 if not isinstance(10, int):
     raise ValueError('分数必须是整数才行')

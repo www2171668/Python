@@ -6,6 +6,9 @@ do
 	nohup python -u main.py \
   --td3 True \
 	--seed "$i" \
-  > log/main$i.log 2>&1 &
-
+  > log/main"$i".log 2>&1 &
+  wait
 done
+
+
+echo "结束......"

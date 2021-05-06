@@ -152,8 +152,7 @@ class LeNetCalss():
                     batch_xs = np.reshape(batch_xs,(-1, 28, 28, 1))
 
                     feeds = {self.x: batch_xs, self.y: batch_ys, self.learn_rate: self.learn_rate_func(epoch)}
-                    sess.run(train, feed_dict=feeds)   # 方法一：模型训练 ★
-                    # train.run(feed_dict=feeds)   # 方法二 ★
+                    sess.run(train, feed_dict=feeds)   # 模型训练 ★
                     avg_loss += sess.run(loss, feed_dict=feeds)   # 对损失函数值进行累加 .
                     # ★★★ —— 与2.1的区别，从run(loss)可以看出，这里的self.Le_net()中不传参，但是对于网络来说，self.x是必不可少的；
                     # 在deed_dict中传入self.x即起到了调用网络的作用，predict获得了网络的return

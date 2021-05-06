@@ -144,9 +144,8 @@ with tf.Session() as sess:
         for i in range(total_batch):
             batch_xs, batch_ys = data.train.next_batch(batch_size)
             feeds = {x: batch_xs, y: batch_ys, learn_rate: learn_rate_func(epoch)}
-            sess.run(train, feed_dict=feeds)   # 方法一：模型训练 ★
-            # train.run(feed_dict=feeds)   # 方法二 ★
-            avg_loss += sess.run(loss, feed_dict=feeds)   # 对损失函数值进行累加
+            sess.run(train, feed_dict=feeds)   # 模型训练 ★
+            avg_loss += sess.run(loss, feed_dict=feeds)   # 记录损失函数
 
         # 计算平均损失值，用所有样本（SGD）的平均损失表示每个样本的损失值
         avg_loss = avg_loss / total_batch

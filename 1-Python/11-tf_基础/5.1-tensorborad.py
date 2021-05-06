@@ -7,8 +7,10 @@ a = tf.placeholder(dtype=tf.float32, shape=[])
 with tf.compat.v1.Session() as sess:
     c = a ** 2
 
-    tf.summary.scalar('a', a)
-    tf.summary.scalar('c', c)
+    with tf.name_scope('fig1'):
+        tf.summary.scalar('a', a)   # tag: fig1/a
+    with tf.name_scope('fig2'):
+        tf.summary.scalar('c', c)
 
     summary_vars = [a]
     smy = tf.summary.merge_all()
