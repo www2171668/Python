@@ -22,19 +22,10 @@ def set_style(name, height, bold=False):
 
     return style
 
-
-# -*- coding: utf-8 -*-
-import xlrd
-import xlwt
-from datetime import date, datetime
-
-
 def read_excel():
-    # 打开文件
-    workbook = xlrd.open_workbook(r'F:\demo.xlsx')
-    # 获取所有sheet
-    print(workbook.sheet_names())       # [u'sheet1', u'sheet2']
-    sheet2_name = workbook.sheet_names()[1]
+    workbook = xlrd.open_workbook(r'F:\demo.xlsx')  # 打开文件
+
+    print(workbook.sheet_names())   # 获取所有sheet [u'sheet1', u'sheet2']
 
     # 根据sheet索引或者名称获取sheet内容
     sheet2 = workbook.sheet_by_index(1)  # sheet索引从0开始
@@ -94,6 +85,5 @@ def write_excel():
 
 
 if __name__ == '__main__':
-    # generate_workbook()
     # read_excel()
     write_excel()

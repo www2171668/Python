@@ -1,6 +1,11 @@
 """"""
 import numpy as np
 
+# %% 某一列的操作
+num = np.arange(1, 5).reshape(2, 2)
+num[:, 0] = num[:, 0] * 100  # 注意赋值
+print(num)
+
 # %% 数组与标量 / 数组与数组的加法
 num = np.arange(1, 5).reshape(2, 2)
 print(num + 2)
@@ -41,7 +46,7 @@ num = np.random.randn(1, 9).reshape(3, 3)
 print(np.sign(num))
 
 arr = np.array([-1.7, 1.5, -0.1, 0.6, 10])
-print(np.ceil(arr))     # \ [-1.  2. -0.  1. 10.] 输出的还是二进制
+print(np.ceil(arr))  # \ [-1.  2. -0.  1. 10.] 输出的还是二进制
 
 arr = np.array([-1.78, 1.5, -0.1, 12.6, 10])
 print(np.around(arr))  # \到个位 [-1.  2. -0.  1. 10.] 输出的还是二进制
