@@ -12,7 +12,7 @@
 
 source activate tf
 
-for ((i=0;i<1;i+=1))
+for ((i=0;i<3;i+=1))
 do
 	nohup python -u AE.py \
   > log/AE"$i".log 2>&1 &   # 在log文件夹中记录log文件
