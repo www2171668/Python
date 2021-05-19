@@ -23,7 +23,7 @@ with tf.Session() as sess:
 # * 不带[0]：result(array([-2.9568975], dtype=float32), array([-0.851817], dtype=float32), array([-0.4014466], dtype=float32), array([-4.6082], dtype=float32), array([1.5168219], dtype=float32), array([-0.12311313], dtype=float32))
 # * 带[0]：result(2.6382523, 0.64382935, 0.70676434, -0.1439712, 0.43426552, -1.2896732)
 
-# %% 共享命名   tf.get_variable(name，shape，initializer)：通过给定名字创建或者返回一个对应变量
+# %% 共享变量   tf.get_variable(name，shape，initializer)：通过给定名字创建或者返回一个对应变量
 '''
     变量作用域使得变量在多次使用时，只使用一个变量值
     name和shape必不可少,name也常称为scope

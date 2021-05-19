@@ -17,7 +17,9 @@ print(a.T)
 # %% *.reshape(*) / *.shape = (*) 修改数组形状        *.resize(*) 用来改变图片大小，会改变图片的数据内容
 # 1、.reshape / .shape
 a = np.arange(10).reshape(2, 5)
+b = np.arange(10).reshape(-1, 5)
 print(a)
+print(b)
 
 a = np.arange(10)
 a.shape = (2, 5)  # 修改数组的形状

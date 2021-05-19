@@ -29,7 +29,7 @@ print(content)
 
 # %% 读取方法一：  file.read(*)    *：读取指定长度的内容，如果没有则读取所有的数据
 # 注意读的时候，是从当前位置开始读的，也就是说，如果指针在末尾，就需要用seek（0）调整指针位置
-files = open('python.txt', 'r', encoding='utf-8')
+files = open('python.txt', 'r', buffering=1, encoding='utf-8')  # buffering=1,保证程序运行时也可以写入
 content = files.read()
 # content = files.read(10)
 
