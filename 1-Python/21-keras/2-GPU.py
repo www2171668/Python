@@ -2,6 +2,10 @@ import os
 import tensorflow as tf
 import keras.backend.tensorflow_backend as KTF
 
+# pip install tensorflow-determinism
+from tfdeterminism import patch
+patch() # 控制kears在gpu上的结果可复现性，放在代码头部即可
+
 #进行配置，每个GPU使用60%上限现存
 os.environ["CUDA_VISIBLE_DEVICES"]="1" # 使用编号为1，2号的GPU
 config = tf.ConfigProto()
@@ -10,3 +14,4 @@ session = tf.Session(config=config)
 
 # 设置session
 KTF.set_session(session )
+

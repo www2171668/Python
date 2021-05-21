@@ -1,8 +1,7 @@
 """"""
-
-# %% np.array() / np.asarray(a)   将列表、元组、列表元祖等转数组
 import numpy as np
 
+# %% np.array() / np.asarray(a)   将列表、元组、列表元祖等转数组
 a = [1, 2, 3, 4, 5]  # ! 或 a = (1, 2, 3, 4, 5)
 arr = np.array(a)
 
@@ -12,6 +11,10 @@ arr = np.array([[1, 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12]])
 arrs = np.empty((2, 3), dtype='i1')
 arrs = np.ones((2, 3))
 arrs = np.zeros((2, 3))
+
+# %% np.identity(n) 标准单位矩阵
+c = np.identity(3)
+print(c)
 
 # %% *.dtype 返回数组中元素的类型。区别于type()       *.astype(*) 数据类型转换
 a = np.random.randint(1, 6, size=(2, 3))

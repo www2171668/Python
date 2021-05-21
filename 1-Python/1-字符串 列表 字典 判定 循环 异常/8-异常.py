@@ -31,19 +31,23 @@ except Exception as e:
 
 # %% else 或 finally ：不管有没有异常都会执行的代码块
 try:
-    print('打开文件！')
-    files = open('aaa.txt', 'w', encoding='utf-8')
-    try:
-        files.write('测试一下行不行')
-    except:
-        print('写入失败')
-    else:
-        print('写入成功')
-    finally:
-        print('关闭文件')
-        files.close()
-except Exception as e:
-    print(e)
+    from tfdeterminism import patch
+    patch()  # 控制kears_gpu
+except:
+    print('没有该模块')
+else:
+    print('继续执行1')
+finally:
+    print('继续执行2')
+
+try:
+    import numpy
+except:
+    print('没有该模块')
+else:
+    print('继续执行1')
+finally:
+    print('继续执行2')
 
 # %%  assert 判断表达式，在条件为 false 时触发异常
 expression = 2 == 3

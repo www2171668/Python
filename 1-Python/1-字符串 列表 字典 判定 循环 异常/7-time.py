@@ -3,7 +3,7 @@
 
 import time
 
-print(time.time())
+print(int(time.time()))
 print(time.ctime())
 
 print('start')

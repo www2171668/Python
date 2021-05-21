@@ -100,4 +100,11 @@ print(a)
 # %% np.unique() 元素去重
 arr = np.array(['图书', '数码', '小吃', '数码', '男装', '小吃', '美食', '数码', '女装'])
 print(np.unique(arr))
-# %% |  &  ！  或且非
+
+# %% multivariate_normal:多元正态分布噪音       mean：均值，维度为1       cov：协方差矩阵
+from scipy.stats import multivariate_normal
+noise = np.array([[-0.08281,-0.02838,0.02398]])
+mul_mean = np.zeros(shape=3)  # \ 均值
+mul_cov = np.array([[-0.48243,-0.86129,0.34654]]) ** 2 * np.identity(3)  # \ 协方差
+p_noise = multivariate_normal.pdf(noise, mul_mean, mul_cov) # 样本的概率密度函数
+print(p_noise)
